@@ -33,7 +33,8 @@ set_app_var link_library "$link_library $synthetic_library"
 
 #-----------------------------------------------------------------------------
 
-define_design_lib WORK_2_retime -path ./WORK_2_retime
+define_design_lib WORK -path ./WORK_2_retime
+set_svf ./${report}/${DESIGN}.svf
 
 #source -e -v synopsys.tcl
 source -e -v synopsys_retime.tcl

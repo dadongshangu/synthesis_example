@@ -34,6 +34,7 @@ set_app_var link_library "$link_library $synthetic_library"
 #-----------------------------------------------------------------------------
 
 define_design_lib WORK -path ./WORK
+set_svf ./${report}/${DESIGN}.svf
 
 source -e -v synopsys.tcl
 

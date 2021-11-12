@@ -28,7 +28,7 @@ set CLOCKS_LIST [ list \
     clk \
     ]
 
-set_dont_touch_network  [all_clocks]
+#set_dont_touch_network  [all_clocks]
 set_ideal_network       [all_clocks]
 
 set RESETS_LIST [ list \
