@@ -69,7 +69,8 @@ group_path -from $all_nonclk_inputs -to $all_nonclk_outputs -name in2out
 # Compile the design
 
 #ungroup -all -flatten
-compile_ultra -gate_clock -no_seq_output_inversion -no_autoungroup -timing_high_effort_script
+#compile_ultra -gate_clock -no_seq_output_inversion -no_autoungroup -timing_high_effort_script
+compile_ultra
 #compile
 #-----------------------------------------------------------------------------
 
