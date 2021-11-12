@@ -4,6 +4,7 @@ module adder_2 #(parameter DSIZE = 64)
                 in_b,
                 in_c,
                 in_d,
+                sum,
                 clk, 
                 rst_n
             );

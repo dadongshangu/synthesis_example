@@ -109,15 +109,15 @@ set_load $OLOAD [all_outputs]
 # input assertions
 #--------------------------------------------------------------------------
 #
-set_input_delay $PI90 -clock clk [get_ports in_a]
-set_input_delay $PI90 -clock clk [get_ports in_b]
-set_input_delay $PI90 -clock clk [get_ports in_c]
-set_input_delay $PI90 -clock clk [get_ports in_d]
+set_input_delay $PI50 -clock clk [get_ports in_a]
+set_input_delay $PI50 -clock clk [get_ports in_b]
+set_input_delay $PI50 -clock clk [get_ports in_c]
+set_input_delay $PI50 -clock clk [get_ports in_d]
 
 #--------------------------------------------------------------------------
 # Output assertions
 #--------------------------------------------------------------------------
-set_output_delay $PO10 -clock clk [get_ports sum]
+set_output_delay $PO50 -clock clk [get_ports sum]
 
 set AllInputNoClkRst [remove_from_collection [all_inputs] [list $RESETS_LIST $CLOCKS_LIST] ]
 set AllOutput   [all_outputs]

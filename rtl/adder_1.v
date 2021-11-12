@@ -4,6 +4,7 @@ module adder_1 #(parameter DSIZE = 64)
                 in_b,
                 in_c,
                 in_d,
+                sum,
                 clk, 
                 rst_n
             );
@@ -18,6 +19,7 @@ input                   rst_n;
 
 wire   [DSIZE-1:0]      sum_ab;
 wire   [DSIZE-1:0]      sum_cd;
+wire   [DSIZE-1:0]      sum_abcd;
 reg    [DSIZE-1:0]      sum_ab_l;
 reg    [DSIZE-1:0]      sum_cd_l;
 reg    [DSIZE-1:0]      sum_abcd_l;

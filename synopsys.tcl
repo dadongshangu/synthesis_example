@@ -5,11 +5,11 @@
 set_app_var dc_allow_rtl_pg true
 lappend DEFINE_LIST ""
 set     RTL_FILE_LIST [ list \
- ./src/${DESIGN}.v    \
+ ./rtl/${DESIGN}.v    \
  ]
 
 set serach_path [list $search_path \
- ./src \
+ ./rtl \
  ]
 
 set RTL_INCLUDE_FILE ""
