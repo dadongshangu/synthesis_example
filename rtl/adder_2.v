@@ -19,6 +19,7 @@ input                   rst_n;
 
 wire   [DSIZE-1:0]      sum_ab;
 wire   [DSIZE-1:0]      sum_cd;
+wire   [DSIZE-1:0]      sum_abcd;
 reg    [DSIZE-1:0]      sum_abcd_l;
 reg    [DSIZE-1:0]      sum_abcd_l2;
 

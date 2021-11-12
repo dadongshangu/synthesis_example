@@ -10,9 +10,9 @@ echo "######################"
 
 
 set DESIGN adder_2
-set report report_2
-set log log_2 
-set netlist netlist_2 
+set report report_2_retime
+set log log_2_retime 
+set netlist netlist_2_retime 
 
 if [file exist ${report}] {} else {file mkdir ${report}}
 if [file exist ${log}] {} else {file mkdir ${log}}
@@ -35,7 +35,8 @@ set_app_var link_library "$link_library $synthetic_library"
 
 define_design_lib WORK -path ./WORK
 
-source -e -v synopsys.tcl
+#source -e -v synopsys.tcl
+source -e -v synopsys_retime.tcl
 
 current_design ${DESIGN}
 

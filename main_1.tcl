@@ -18,7 +18,7 @@ if [file exist ${report}] {} else {file mkdir ${report}}
 if [file exist ${log}] {} else {file mkdir ${log}}
 if [file exist ${netlist}] {} else {file mkdir ${netlist}}
 
-set rtl_path ".."
+set rtl_path "rtl"
 set search_path [list .                                 \
                    ${rtl_path}                          \
                 ]

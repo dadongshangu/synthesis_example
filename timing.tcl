@@ -10,18 +10,18 @@ set_max_fanout 32 [current_design]
 set_max_transition 0.3 [current_design]
 
 # The clk period is user-defined.
-set PERIOD 1000.0
+set PERIOD 100 
 
 
 create_clock -name clk -period [expr $PERIOD*$pre_clock_margin] [get_ports clk]
 
 # Set the clock transition time to a value compatible with its period.
-set CTRANSITION 40.0
+set CTRANSITION [expr ${PERIOD}*0.1]
 set_clock_transition  $CTRANSITION  clk
 set_input_transition  $CTRANSITION  [get_ports clk]
 
 # Set the clock uncertainty to a value compatible with its period.
-set UNCERTAINTY 50.0
+set UNCERTAINTY [expr ${PERIOD}*0.1]
 set_clock_uncertainty -setup $UNCERTAINTY [get_clocks clk]
 
 set CLOCKS_LIST [ list \
