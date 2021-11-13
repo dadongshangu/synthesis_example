@@ -39,7 +39,7 @@ if { [llength RESETS_LIST ] > 0 } {
     foreach RstName $RESETS_LIST {
         echo "INFO: Defining Reset : $RstName"
         set_drive 0 [get_ports $RstName -filter {@port_direction ==in} -quiet]
-        set_false_path -from [get_ports $RstName -quiet]
+        #set_false_path -from [get_ports $RstName -quiet]
         set_ideal_network -no_propagate [get_nets -of_object [get_ports $RstName -filter {@port_direction == in} -quiet] -quiet]
     }
 }

@@ -18,4 +18,4 @@ sg_2 :
 
 clean:
 	-@rm -rf adder_1 adder_2 *.rpt *.log
-	-rm -rf alib-52 default.svf WORK  *.report_* *.log report_1 log_1 netlist_1 report_2 log_2 netlist_2 report_2_retime log_2_retime netlist_2_retime
+	-rm -rf alib-52 default.svf WORK  *.report_* *.log report_1 log_1 netlist_1 report_2 log_2 netlist_2 report_2_retime log_2_retime netlist_2_retime WORK_2_retime

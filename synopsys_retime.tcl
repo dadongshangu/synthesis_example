@@ -55,16 +55,16 @@ set all_reg [all_registers]
 set all_reg [remove_from_collection $all_reg $all_icgs]
 set all_mem [get_cells -hierarchical -filter "is_memory_cell == true"]
 
-group_path -from $all_reg -to $all_reg -name reg2reg
-group_path -from $all_reg -to $all_nonclk_outputs -name reg2out
-group_path -from $all_nonclk_inputs -to $all_reg -name in2reg 
-group_path -from $all_nonclk_inputs -to $all_nonclk_outputs -name in2out 
-#group_path -from $all_mem -to $all_reg -name mem2reg
-#group_path -from $all_reg -to $all_mem -name reg2mem 
+#group_path -from $all_reg -to $all_reg -name reg2reg
+#group_path -from $all_reg -to $all_nonclk_outputs -name reg2out
+#group_path -from $all_nonclk_inputs -to $all_reg -name in2reg 
+#group_path -from $all_nonclk_inputs -to $all_nonclk_outputs -name in2out 
+##group_path -from $all_mem -to $all_reg -name mem2reg
+##group_path -from $all_reg -to $all_mem -name reg2mem 
 
 #-----------------------------------------------------------------------------
 
-
+set_optimize_register true
 #-----------------------------------------------------------------------------
 # Compile the design
 
