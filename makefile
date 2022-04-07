@@ -14,8 +14,11 @@ syn_2_retime:
 sg_2 : 
 	sg_shell -t run_sg_2.tcl |tee sg_run_2.log
 
-.PHONY: sg_1 sg_2 syn_1 syn_2 syn_2_retime clean 
+fm: 
+	fm_shell -t fm.tcl |tee fm_run.log
+
+.PHONY: sg_1 sg_2 syn_1 syn_2 syn_2_retime fm clean 
 
 clean:
 	-@rm -rf adder_1 adder_2 *.rpt *.log
-	-rm -rf alib-52 default.svf WORK  *.report_* *.log report_1 log_1 netlist_1 report_2 log_2 netlist_2 report_2_retime log_2_retime netlist_2_retime WORK_2_retime
+	-@rm -rf alib-52 default.svf WORK  *.report_* *.log report_1 log_1 netlist_1 report_2 log_2 netlist_2 report_2_retime log_2_retime netlist_2_retime WORK_2_retime
